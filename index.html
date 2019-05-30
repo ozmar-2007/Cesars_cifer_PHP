@@ -1,0 +1,75 @@
+
+
+
+<!DOCTYPE html><html>
+<head>
+    <style>
+        form 
+        {
+            margin: 8px;
+        }
+
+        div 
+        {
+            width:   350px;
+            padding: 10px;
+            border: 5px solid rgb(216, 45, 188);
+            margin: 8;
+        }
+    </style>
+
+	<meta charset="utf-8" />
+	<title>
+		Exercicio: </p>
+		Função para Criptografia de Cesar</p>
+		
+    </title>
+    
+</head>
+
+<body>
+
+
+
+
+<div>
+            Simula o disco para "Cifra de Cesar" com 26 caracteres(A até Z) girando
+        dentro de um circulo fixo com os mesmos 26 caracteres que coincidem entre si.<br>
+            Para alterar número de posições do deslocamento para n,
+        altere o value da opção ''Criptografar'' da lista de opções
+        para esse novo n desejado, e ''Descriptograafar'' para 26 - n.<br>
+            Embora pareça ser intuitivo -n para deslocar para trás, esse algoritmo
+        só 'gira para frente', ou seja:<br>
+        #_ Sendo 'a' letra para se Criptografar com 3 avanços,
+        teremos 'd' como saída;<br>
+        #_ Para Descriptografar 'd' com 3 casas, voltaríamos tres
+        posições(ou n = -3). Como se trata de "ratched move"(com apenas avanços positivos),
+        giramos 26 - n posições, resultando em 23 avanços que passará por uma volta 
+        inteira do disco e chegando na casa "a";<br>
+        #_ Alterar simultaneamente o valor na lista de opçoes do formulario no
+        index.html e do server/api.<br>
+    
+</div>
+
+<div>
+<form method="post" action="CaesarServer.php">
+        <p>Cifra de Cesar</p>
+
+
+        <input type="text" name="mssg" placeholder="apenas letras" required/>
+
+        <select multiple name="mode" >
+            <option value="5">Criptografar</option>
+			<option value="21" selected>Descriptografar</option> 
+        </select><br />
+        
+        <input name="submit" type="submit" value="send" />
+</form>
+</div>
+
+    
+   
+
+</body>
+
+</html>    
