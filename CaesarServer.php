@@ -55,13 +55,13 @@ posições cada letra da string.
   #para cada letra da palavra a ser codificada...
   foreach($mssg as $letra)
   {
-    /* se (posição_da_letra_no_alfabeto + deslocamento) <= 25:
-    então e´ possível trocar a letra  possivel trocar
-    diretamente pela sua equivalente deslocada e add ao vetor resultado,*/ 
+    /* SE (posição_da_letra_no_alfabeto + deslocamento) <= 25:
+    então e´ possível trocar a letra diretamente 
+    pela sua equivalente deslocada e add ao vetor resultado, */ 
     if(array_search($letra,$caixaAlta) + $offset <= 25)
       array_push($decodificado, $caixaAlta[array_search($letra,$caixaAlta)+$offset]);
 
-    /* senão:
+    /* SENÃO:
     desloca-se de posição_da_letra_no_alfabeto até 25, e volta em 0 continua avançando até alcançar os
     posição_da_letra_no_alfabeto_+_deslocamento movimentos. adicionando a letra dessa 'casa' ao vetor resultado*/
     else
@@ -73,7 +73,7 @@ posições cada letra da string.
   return implode($decodificado);
 }
 
-#fim php;
+#fIM php;
 ?>
 
 
